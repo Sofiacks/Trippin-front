@@ -1,7 +1,6 @@
 import { Modal, Button, } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from "react";
-import Blog from '../pages/Blog';
 
 export default function Confirmed() {
 

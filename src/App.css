@@ -212,8 +212,7 @@ body {
 .wrapper{
   max-width: 500px;
   width: 100%;
-  background: rgb(209, 154, 70);
-  margin: 50px auto;
+  background-color: #BADA87;  margin: 50px auto;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
   padding: 30px;
   border-radius: 20px;
@@ -272,7 +271,7 @@ section{
 .wrapper{
   max-width: 500px;
   width: 100%;
-  background: rgb(209, 154, 70);
+  background-color: #BADA87;  margin: 50px auto;
   margin: 50px auto;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
   padding: 30px;
@@ -284,7 +283,7 @@ section{
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 25px;
-  color: #efdb9f;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
 }
@@ -311,7 +310,7 @@ button {
   width: 50%;
  font-size: 15px; 
  border: 10px;
- background:  #fec107;
+ background: #BADA87;
  color: #fff;
  cursor: pointer;
  border-radius: 3px;
@@ -381,7 +380,7 @@ body{
 .wrapper{
   max-width: 500px;
   width: 100%;
-  background: rgb(209, 154, 70);
+  background: #ffffff;
   margin: 50px auto;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
   padding: 30px;
@@ -393,7 +392,7 @@ body{
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 25px;
-  color: #efdb9f;
+  background-color: #947929f6;
   text-transform: uppercase;
   text-align: center;
 }
@@ -410,7 +409,7 @@ body{
 
 .wrapper .form .inputfield label{
    width: 200px;
-   color: #efdb9f;
+   color: #947929f6;
    margin-right: 10px;
   font-size: 14px;
 }
@@ -471,7 +470,7 @@ body{
 
 .wrapper .form .inputfield p{
    font-size: 14px;
-   color: #efdb9f;
+   color: #947929f6;
 }
 .wrapper .form .inputfield .check{
   width: 15px;
@@ -489,7 +488,7 @@ body{
 .wrapper .form .inputfield .check .checkmark{
   width: 15px;
   height: 15px;
-  border: 1px solid #fec107;
+  border: 1px solid #947929f6;
   display: block;
   position: relative;
 }
@@ -527,7 +526,7 @@ body{
     
    font-size: 15px; 
    border: 10px;
-   background:  #fec107;
+   background:  #BADA87;
    color: #fff;
    cursor: pointer;
    border-radius: 3px;

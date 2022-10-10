@@ -57,7 +57,7 @@ export default function Profile () {
           <p>J'accepte les termes et conditions</p>
        </div> 
       <div class="inputfield">
-        <input type="submit" value="Valider" class="btn"/> 
+        <input type="submit" value="Valider" class="btn" /> 
         
         <a href="/" class="criteres"> <input type="submit" value="+de critères" class="btn"/>
         </a>
