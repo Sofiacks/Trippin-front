@@ -1,4 +1,5 @@
 import Menu from "../components/Menu";
+import '../Profile.css';
 
 export default function Profile () {
 
@@ -63,9 +64,12 @@ export default function Profile () {
         </a>
       </div>
       <div class="inpusupp-compte">
-      <a href="/" class="link-supp-profil" >Supprimer mon compte </a>
+      <a href="/login" class="link-supp-profil" >Supprimer mon compte </a>
             </div>
         </div>
     </div>
 </>
 )}
+
+// SUr cette page figurera un Container " mes voyages" faisant reference 
+// aux voyages favoris , voyages passés et à venir etc

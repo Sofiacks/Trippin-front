@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from 'react';
-import { Form, Button, Spinner } from 'react-bootstrap';
+import { Form, Button, Spinner, Row, Col, FormGroup } from 'react-bootstrap';
 import TripContext from "../context.js/tripContext";
 
 
@@ -58,7 +58,42 @@ export default function Filtres() {
 
   return (
 
-    <>
+
+
+<Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
+    <Col sm={{ span: 10, offset: 2 }}>
+      <Form.Group className="title"  style={{color: "black", fontWeight: "bold" , fontSize: "24px"}} >
+       Trouvez votre voyage
+      </Form.Group>
+
+
+      <Form.Group as={Row} className="mb-3">
+    <Form.Label column sm={2}>
+      Ville
+    </Form.Label>
+    <Col sm={10}>
+      <Form.Control type="ville" placeholder="Où" />
+    </Col>
+  </Form.Group>
+
+  <Form.Group as={Row} className="mb-3">
+    <Form.Label column sm={2}>
+      Aller
+    </Form.Label>
+    <Col sm={10}>
+      <Form.Control type="date" />
+    </Col>
+  </Form.Group>
+
+  <Form.Group as={Row} className="mb-3">
+    <Form.Label column sm={2}>
+      Retour
+    </Form.Label>
+    <Col sm={10}>
+      <Form.Control type="date" />
+    </Col>
+  </Form.Group>
+ 
       <Form.Group className="mb-3">
         <Form.Label>Mot-clés</Form.Label>
         <Form.Control placeholder="mot-clé" onChange={handleChangeDescription}/>
@@ -88,77 +123,16 @@ export default function Filtres() {
 
         </Form.Control>
       </Form.Group>
+
+
+
+      <FormGroup>
+      <a href="/profile" className="criteres" value="+de critères" style={{color:"black"}}>+de critères</a>
+      </FormGroup>
       
-      <Button type="submit" onClick={handleSubmit}>Rechercher 
+      <Button type="submit" style={{color: "#ffffff", backgroundColor: "black"}} onClick={handleSubmit}>Rechercher 
       {isLoading?<Spinner animation="border" variant="light" size="sm"/>:<></>}</Button>
-    </>
+      </Col> </Form.Group> 
   )
 }
-  /* {<Form>
-
-  <div className="wrapper">
-    <div className="title">
-      Trouvez votre voyage
-    </div>
-  </div>
-
-  <Form.Group as={Row} className="mb-3">
-    <Form.Label column sm={2}>
-      Ville
-    </Form.Label>
-    <Col sm={10}>
-      <Form.Control type="ville" placeholder="Où" />
-    </Col>
-  </Form.Group>
-
-  <Form.Group as={Row} className="mb-3">
-    <Form.Label column sm={2}>
-      Aller
-    </Form.Label>
-    <Col sm={10}>
-      <Form.Control type="date" />
-    </Col>
-  </Form.Group>
-
-  <Form.Group as={Row} className="mb-3">
-    <Form.Label column sm={2}>
-      Retour
-    </Form.Label>
-    <Col sm={10}>
-      <Form.Control type="date" />
-    </Col>
-  </Form.Group>
-
-
-  <fieldset>
-
-    <Form.Label column sm={12}>
-      Centre(s) d'intêret(s)
-    </Form.Label>
-
-    <Form.Select aria-label="Default select example">
-      <option value="0">Choisissez</option>
-      <option value="1">Peu importe</option>
-      <option value="2">Aucun</option>
-      <option value="3">Personnaliser...</option>
-    </Form.Select>
-
-    <a href="/" className="criteres" value="+de critères">+de critères</a>
-
-  </fieldset>
-
-  <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
-    <Col sm={{ span: 10, offset: 2 }}> </Col>
-  </Form.Group>
-
-  <Form.Group as={Row} className="mb-3">
-    <Col sm={{ span: 10, offset: 2 }}>
-
-      {/*onClick={handleChange} 
-
-      <Button type="submit" >Rechercher</Button>
-
-    </Col>
-
-  </Form.Group>
-</Form> }*/
+  

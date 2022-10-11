@@ -44,7 +44,7 @@ export default function Participation() {
         {show ? <Confirmed /> : <></>}
       </div>
       <div class="inpusupp-compte">
-        <a href="/" class="link-supp-profil" >Annulation </a>
+        <a href="/home" class="link-supp-profil" >Annulation </a>
       </div>
     </div>
 

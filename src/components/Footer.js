@@ -7,7 +7,7 @@ import logo from '../assets/logo.png';
 export default function Footer () {
 
     return (
-        <Container fluid  className="m-0" style={{backgroundColor: "#FFFFFF"}} >
+        <Container fluid  className="m-0" style={{backgroundColor: "black"}} >
           <Row>
             <Col>
             <div
@@ -19,8 +19,8 @@ export default function Footer () {
                   alignItems: "center"
                 }}
               >
-                    <NavLink href='#'>Mentions légales</NavLink>
-                    <NavLink href='#'>CGV / CGU</NavLink>
+                    <NavLink href='#' style={{color: "#efdb9f"}}>Mentions légales</NavLink>
+                    <NavLink href='#' style={{color: "#efdb9f"}}>CGV / CGU</NavLink>
                 </div>
             </Col>
             <Col>
@@ -34,8 +34,8 @@ export default function Footer () {
                   alignItems: "center"
                 }}
               >
-            <NavLink>TVA FR12345678910</NavLink>
-            <NavLink>SIRET 12345678910112</NavLink>
+            <NavLink style={{color: "#efdb9f"}}>TVA FR12345678910</NavLink>
+            <NavLink style={{color: "#efdb9f"}}>SIRET 12345678910112</NavLink>
             </div>
             </Col>
             <Col>
@@ -49,8 +49,8 @@ export default function Footer () {
                   alignItems: "center"
                 }}
               >
-                    <TiSocialFacebookCircular size={50}/>
-                    <TiSocialLinkedinCircular size={50}/>
+                    <TiSocialFacebookCircular size={50} style={{color: "#efdb9f"}}/>
+                    <TiSocialLinkedinCircular size={50} style={{color: "#efdb9f"}}/>
                     </div>
             </Col>
             <Col>
@@ -64,8 +64,8 @@ export default function Footer () {
                   alignItems: "center"
                 }}
               >
-                    <Image variant="" src={logo} alt="logo" height='100vh'/>
-                    <Row>A hobby, a city and let's trippin</Row>
+                    <Image variant="" src={logo} alt="logo" height='100vh' />
+                    <Row style={{color: "#efdb9f"}}>A hobby, a city and let's trippin</Row>
                 </div>
             </Col>
         </Row>

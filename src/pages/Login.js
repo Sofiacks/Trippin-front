@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../Login.css';
 
 export default function Login() {
   const [email, setEmail] = useState(null);
@@ -33,25 +34,24 @@ export default function Login() {
         //setAuthToken(token);
 
         //redirect user to home page
-           window.location.href = '/'
+           window.location.href = '/home'
       })
       .catch((err) => console.log(err));
   };
   return (
-    <div className="container col-xl-10 col-xxl-8 px-4 py-5" >
-      <div className="row p-4 pb-5 pe-lg-4 pt-lg-5 align-items-center rounded-3 border shadow-lg" style={{backgroundColor: "#FFFFFF"}} >
+    <div className="container col-xl-10 col-xxl-8 px-4 py-5" style={{backgroundColor: "#efdb9f"}}>
+      <div className="row p-4 pb-5 pe-lg-4 pt-lg-5 align-items-center rounded-3 border shadow-lg" style={{backgroundColor: "black"}} >
         <div className="col-lg-7 text-center text-lg-start">
-          <h3 className="display-5 fw-bold lh-1 mb-3">
+          <h3 className="display-5 fw-bold lh-1 mb-3" style={{color: "#ffffff"}} >
             A Hobby, a city and let's trippin
           </h3>
-          <p className="col-lg-10 fs-4">
-            Below is an example form built entirely with Bootstrap’s form
-            controls. Each required form group has a validation state that can
-            be triggered by attempting to submit the form without completing it.
+          <p className="col-lg-10 fs-4" style={{color: "#ffffff"}}>
+            Recherches tes voyages selon tes passions, tes envies !
+            Et partages les avec toute une communauté !
           </p>
         </div>
         <div className="col-md-10 mx-auto col-lg-5">
-          <form className="p-4 p-md-5 border rounded-3 bg-light">
+          <form className="p-4 p-md-5 border rounded-3" style={{backgroundColor: "#efdb9f"}}>
             <div className="form-floating mb-3">
               <input
                 type="email"
@@ -77,12 +77,12 @@ export default function Login() {
                 <input type="checkbox" value="remember-me" /> Se souvenir de moi
               </label>
             </div>
-            <button className="w-100 btn btn-lg btn-primary" type="submit" onClick={handleSubmit}>
+            <button className="btn_log" type="submit" onClick={handleSubmit}>
              Connexion
             </button>
             <hr className="my-4" />
             <a href="/register"><small className="text-muted">
-              pas encore de compte? S'inscrire ici!
+             Créer un compte.
             </small></a>
           </form>
         </div>
