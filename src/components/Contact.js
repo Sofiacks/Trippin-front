@@ -3,6 +3,8 @@ import '../Profile.css';
 
 export default function () {
 
+    // prochainement handleclick pour envoyer les données en BDD 
+
     return (
             
         <>

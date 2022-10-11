@@ -5,8 +5,10 @@ import TripContext from "../context.js/tripContext";
 
 export default function Filtres() {
 
-  const {trips, setTrips} = useContext(TripContext);
-  const [isLoading, setLoading] = useState(false);
+// declaration des variables 
+
+  const {trips, setTrips} = useContext(TripContext); {/*"useContext" permet d'utiliser la variable sur plusieurs pages difrtes'  */}
+  const [isLoading, setLoading] = useState(false); {/* variable d'etat pour "spinner" */}
     
   const [tags, setTags] = useState([]);
   const [listTags, setListTags] = useState([]);
@@ -27,13 +29,14 @@ export default function Filtres() {
           setListCategories(response['hydra:member']);
         })
 
-      //on fetch également les Tags pour alimenter les possibilités de choix dans le formulaire
+      //on fetch les dates et les villes =ment
 
     };
 
     fetchFiltres();
 
   },[])
+
 
   const handleSubmit = (e) => {
 

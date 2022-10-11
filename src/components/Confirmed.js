@@ -4,6 +4,8 @@ import React, { useState } from "react";
 
 export default function Confirmed() {
 
+    // declaration de la variable show en vue d'afficher le modal
+    // "handleclose" pour attribuer la fonction fermer au bouton "fermer" ( setshow false) , l.38
 
     const [show, setShow] = useState(true);
     const handleClose = () => setShow(false);
@@ -11,13 +13,14 @@ export default function Confirmed() {
     return (
 
         <>
+            {/* le modal est la petite fenetre qui s'ouvre sur la page actuelle apres un usestate */}
 
             <Modal
                 show={show}
                 backdrop="static"
                 keyboard={false}
             >
-                <Modal.Header closeButton>
+                <Modal.Header closeButton> {/*petite croix en haut à droite, ici non alimentée */}
                     <Modal.Title>Super! </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -32,7 +35,7 @@ export default function Confirmed() {
 
                 <Modal.Footer>
                     <a href='/blog'><Button variant="primary" type="submit">Share!</Button></a>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" style={{ color: "#777777" }} onClick={handleClose}>
                         Fermer
                     </Button>
                 </Modal.Footer>
