@@ -3,7 +3,7 @@
 .wrapper{
     max-width: 500px;
     width: 100%;
-    background: black;  margin: 50px auto;
+    background: rgb(160, 165, 203);  margin: 50px auto;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
     padding: 20px;
     border-radius: 10px;
@@ -14,7 +14,7 @@
     font-size: 34px;
     font-weight: 500;
     margin-bottom: 15px;
-    background-color: black;
+    background-color: #efdb9f;
     text-transform: uppercase;
     text-align: center;
   }
@@ -138,7 +138,7 @@
      font-size: 18px; 
      border: 10px;
      background:  #efdb9f;
-     color: black;
+     color: rgb(56, 78, 149);
      cursor: pointer;
      border-radius: 3px;
      outline: none;
@@ -147,7 +147,8 @@
    .inpusupp-compte .link-supp-profil {
 
     color: white;
-    font-size: 10px; 
+    font-size: 10px;
+    font-weight: bold; 
    
    }
   

@@ -9,10 +9,10 @@ const RouteGuard = () => {
     function hasJwt () {
         let flag = false ;
 
-        console.log("token JWT: " + token);
         token === null? flag=false : flag=true ;
       
         //flag=false;
+        console.log("flag: " + flag + " ,token JWT: " + token );
         return flag;
     }
     // 

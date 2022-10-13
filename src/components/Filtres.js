@@ -9,6 +9,7 @@ export default function Filtres() {
 
   const {trips, setTrips} = useContext(TripContext); {/*"useContext" permet d'utiliser la variable sur plusieurs pages difrtes'  */}
   const [isLoading, setLoading] = useState(false); {/* variable d'etat pour "spinner" */}
+  const [isVisible, setVisible] = useState(false); {/* variable pour afficher/cacher les critères supplementaires */}
     
   const [categories, setCategories] = useState([]);
   const [listCategories, setListCategories] = useState([]);
@@ -87,6 +88,7 @@ export default function Filtres() {
   const handleChangeVille = (e) => { setVille(e.target.value)}
   const handleChangeDateAller = (e) => { setDateAller(e.target.value)}
   const handleChangeDateRetour = (e) => { setDateRetour(e.target.value)}
+  const handleVisible= () => {setVisible(!isVisible)}
 
   return (
 
@@ -125,7 +127,8 @@ export default function Filtres() {
       <Form.Control type="date" onChange={handleChangeDateRetour}/>
     </Col>
   </Form.Group>
- 
+    {isVisible?
+    <>
       <Form.Group className="mb-3">
         <Form.Label>Mot-clés</Form.Label>
         <Form.Control placeholder="mot-clé" onChange={handleChangeDescription}/>
@@ -154,11 +157,14 @@ export default function Filtres() {
 
         </Form.Control>
       </Form.Group>
-
+      </>
+      :
+      <></>
+      }
 
 
       <FormGroup>
-      <a href="/profile" className="criteres" value="+de critères" style={{color:"black"}}>+ de critères</a>
+      <a className="criteres" value="+ de critères" style={{color:"black"}} onClick={handleVisible}>+ de critères</a>
       </FormGroup>
       
       <Button type="submit" style={{color: "#ffffff", backgroundColor: "black"}} onClick={handleSubmit}>Rechercher 

@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import {Col, Spinner} from 'react-bootstrap';
+import {Col, Spinner, Container} from 'react-bootstrap';
 import tripContext from "../context.js/tripContext";
 import Cards from "./Cards";
 
@@ -48,7 +48,19 @@ const Trips = () => {
         );
     }
 
-    return (<Spinner animation="border" variant="dark" />
+    return (
+        <Container 
+            style={{
+                width:'100vw', 
+                height:'100vh', 
+                display: 'flex', 
+                flexDirection:'column', 
+                justifyContent: 'center', 
+                alignItems:'center'
+            }}>
+                <Spinner animation="border" variant="dark" />
+                <p>Veuillez patienter....</p>
+        </Container>
     );
 }
 
