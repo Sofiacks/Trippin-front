@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import {Navigate, Outlet } from 'react-router-dom';
+import loginContext from "../context.js/loginContext";
 
 const RouteGuard = () => {
+
+    const {token, setToken} = useContext(loginContext);
 
     function hasJwt () {
         let flag = false ;
 
-        localStorage.getItem("token") ? flag=true : flag=false ;
+        console.log("token JWT: " + token);
+        token === null? flag=false : flag=true ;
       
-        flag=true;
+        //flag=false;
         return flag;
     }
     // 

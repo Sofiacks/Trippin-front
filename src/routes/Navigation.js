@@ -22,7 +22,7 @@ export default function Navigation() {
                     <Route path='/register' element={<Register />} />
 
                     <Route path='/' element={<RouteGuard />} >
-                        <Route path='' element={<Login />} />
+                        <Route path='' element={<Home />} />
                         <Route path='home' element={<Home />} />
 
                         <Route path='profile' element={<Profile />} />

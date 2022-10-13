@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import loginContext from "../context.js/loginContext";
 import '../Login.css';
 
 export default function Login() {
   const [email, setEmail] = useState(null);
   const [pwd, setPwd] = useState(null);
+  const {token,setToken} = useContext(loginContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,24 +22,28 @@ export default function Login() {
       }),
     };
 
-    fetch("http://127.0.0.1:8000/api/login_check", requestOptions)
+    fetch("http://localhost:8000/api/login_check", requestOptions)
       .then((response) => response.json())
       .then((response) => {
         console.log("reponse: " + JSON.stringify(response));
         //get token from response
-        const token = response.token;
+        //const token = response.token;
 
+        //TODO: gestion erreur de connexion
+        
         //set JWT token to local
-        localStorage.setItem("token", token);
+        //localStorage.setItem("token", token);
+        setToken(response["token"]);
 
         //set token to axios common header
         //setAuthToken(token);
 
         //redirect user to home page
-           window.location.href = '/home'
+        window.location.href = '/'
       })
       .catch((err) => console.log(err));
   };
+
   return (
     <div className="container col-xl-10 col-xxl-8 px-4 py-5" style={{backgroundColor: "#efdb9f"}}>
       <div className="row p-4 pb-5 pe-lg-4 pt-lg-5 align-items-center rounded-3 border shadow-lg" style={{backgroundColor: "black"}} >

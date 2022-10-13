@@ -1,12 +1,17 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './routes/Navigation';
-
+import loginContext from './context.js/loginContext';
+import { useState } from 'react';
 
 export default function App() {
  
+  const [token,setToken] = useState([]);
+
   return (
-   <Navigation/>
+    <loginContext.Provider value={{token,setToken}}>
+      <Navigation/>
+    </loginContext.Provider>
   );
 }
 
