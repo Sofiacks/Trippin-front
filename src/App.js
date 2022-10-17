@@ -6,9 +6,10 @@ import { useState } from 'react';
 
 export default function App() {
  
-  const [token,setToken] = useState([]);
+  const [token,setToken] = useState(localStorage.getItem("token"));
 
   return (
+
     <loginContext.Provider value={{token,setToken}}>
       <Navigation/>
     </loginContext.Provider>

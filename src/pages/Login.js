@@ -30,9 +30,9 @@ export default function Login() {
         //const token = response.token;
 
         //TODO: gestion erreur de connexion
-        
+
         //set JWT token to local
-        //localStorage.setItem("token", token);
+        localStorage.setItem("token", response["token"]);
         setToken(response["token"]);
 
         //set token to axios common header
